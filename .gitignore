@@ -1,0 +1,61 @@
+# ====================================================================
+# TRACEFINDER SYSTEM PRODUCTION GITIGNORE
+# ====================================================================
+
+# 1. Local Python Environment Archives (Keep off GitHub)
+.venv/
+venv/
+ENV/
+env/
+bin/
+lib/
+lib64/
+include/
+share/
+pyvenv.cfg
+pip-selfcheck.json
+
+# 2. Heavy Forensic Datasets & Large Matrix Cache Arrays
+Dataset/
+dataset_inventory.csv
+scanner_features_final.csv
+X_final.npy
+y_final.npy
+
+# 3. Legacy Classical ML Weights & Testing Artifacts
+legacy_archive/
+*.joblib
+test_model_robustness.py).py
+train_ensemble.py
+feature_extractor.py
+
+# 4. Explicit Exception Rule: Allow our clean, small verification asset
+# This ensures users can test your live Flask-React infrastructure natively
+!test_patch_sample.npy
+
+# 5. Core React.js Frontend Clutter (Standard Node Exclusions)
+tracefinder-ui/node_modules/
+tracefinder-ui/build/
+tracefinder-ui/.pnp
+tracefinder-ui/.pnp.js
+
+# React Testing & Environment Local Leaks
+tracefinder-ui/.env.local
+tracefinder-ui/.env.development.local
+tracefinder-ui/.env.test.local
+tracefinder-ui/.env.production.local
+tracefinder-ui/npm-debug.log*
+tracefinder-ui/yarn-debug.log*
+tracefinder-ui/yarn-error.log*
+
+# 6. Operating System & IDE System Overhead Clutter
+.idea/
+.vscode/
+*.suo
+*.ntvsvo*
+*.njsproj
+*.sln
+*.swp
+*~
+.DS_Store
+Thumbs.db
